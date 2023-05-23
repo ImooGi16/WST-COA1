@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MotZ Customer Feedback Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>MotZ Customer Feedback Form</h1>
+  <form id="feedbackForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Rating:</label>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5" required>
+      <label for="star5"></label>
+      <input type="radio" id="star4" name="rating" value="4" required>
+      <label for="star4"></label>
+      <input type="radio" id="star3" name="rating" value="3" required>
+      <label for="star3"></label>
+      <input type="radio" id="star2" name="rating" value="2" required>
+      <label for="star2"></label>
+      <input type="radio" id="star1" name="rating" value="1" required>
+      <label for="star1"></label>
+    </div>
+
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+    <label for="newsletter">Subscribe to Newsletter:</label>
+    <input type="checkbox" id="newsletter" name="newsletter">
+
+    <label for="contactMethod">Preferred Contact Method:</label>
+    <select id="contactMethod" name="contactMethod" required>
+      <option value="">Select...</option>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="mail">Mail</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
